@@ -186,7 +186,7 @@ class Video extends CI_Controller {
             <?php 
                 $filetype = mime_content_type($video->video_path);
                 if(in_array('video',explode("/",$filetype))): ?>
-                <a href="<?php echo site_url('video?file='.$video->video_random_key);?>">
+                <a href="<?php echo site_url('video?file='.$video->video_random_key);?>" target="_blank">
                     <video width="220" height="140" controls>
                         <source src="<?php echo base_url($video->video_path);?>" type="<?php echo $filetype;?>">
                     </video>

@@ -1,27 +1,31 @@
 <!doctype html>
 <html>
+
 <head>
-   <meta charset="UTF-8">
-   <link rel="shortcut icon" href="./.favicon.ico">
-   <title>Directory Contents </title>
-   <link rel="stylesheet" href="<?php echo base_url('/assets/css/style.css')?>">
-   <script src="<?php echo base_url('/assets/js/sorttable.js')?>"></script>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="./.favicon.ico">
+    <title>Directory Contents </title>
+    <link rel="stylesheet" href="<?php echo base_url('/assets/css/style.css')?>">
+    <script src="<?php echo base_url('/assets/js/sorttable.js')?>"></script>
 </head>
+
 <body>
     <div id="container">
-	    <h1> Directory Contents </h1>
-        <a class="" style="float: right; padding: 10px; background-color: #FE4902; color: #fff; margin: 0px 10px 10px 0px" href="<?php echo site_url('/video/new')?>">Upload new file</a>
-    	<table class="sortable"> 
-    	    <thead>
-        		<tr> 
-        			<th>Filename</th>
-        			<th>Type</th>
-        			<th>Size</th>
-        			<th>Date Modified</th>
-        		</tr>
-    	    </thead>
-    	    <tbody>
-    	<?php
+        <h1> Directory Contents </h1>
+        <a class=""
+            style="float: right; padding: 10px; background-color: #FE4902; color: #fff; margin: 0px 10px 10px 0px"
+            href="<?php echo site_url('/video/new')?>">Upload new file</a>
+        <table class="sortable">
+            <thead>
+                <tr>
+                    <th>Filename</th>
+                    <th>Type</th>
+                    <th>Size</th>
+                    <th>Date Modified</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
          	// Checks to see if veiwing hidden files is enabled
         	if($_SERVER['QUERY_STRING'] == "hidden")
         	{
@@ -171,9 +175,10 @@
         	   }
         	}
     	?>
-    	</tbody>
-    	</table>
-	<h2> <?php echo("<a href='$ahref'>$atext hidden files</a>"); ?> </h2>
-</div>
+            </tbody>
+        </table>
+        <h2> <?php echo("<a href='$ahref'>$atext hidden files</a>"); ?> </h2>
+    </div>
 </body>
+
 </html>
